@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: config-service-pfe
+server:
+  port: 9999
