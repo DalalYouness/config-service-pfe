@@ -1,5 +1,14 @@
 spring:
   application:
     name: config-service-pfe
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/DalalYouness/config-repo-pfe.git
+    discovery:
+      enabled: false
 server:
   port: 9999
+
+
