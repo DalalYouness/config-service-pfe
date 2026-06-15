@@ -1,6 +1,9 @@
+#service  name
 spring:
   application:
     name: config-service-pfe
+
+#repository git url when we added our configurations
   cloud:
     config:
       server:
@@ -8,7 +11,15 @@ spring:
           uri: https://github.com/DalalYouness/config-repo-pfe.git
     discovery:
       enabled: true
+
+#vault url when we added our secrets
+    vault:
+      host: localhost
+      scheme: http
+      authentication: token
+      token: hvs.Z3mbFWtl2KkW29DZCiRHnJBV
+      port: 8200
+
+#server port
 server:
   port: 8888
-
-
