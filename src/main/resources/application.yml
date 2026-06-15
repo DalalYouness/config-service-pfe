@@ -17,7 +17,7 @@ spring:
       host: localhost
       scheme: http
       authentication: token
-      token: hvs.Z3mbFWtl2KkW29DZCiRHnJBV
+      token: ${VAULT_TOKEN}
       port: 8200
 
 #server port
