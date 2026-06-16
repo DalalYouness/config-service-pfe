@@ -1,25 +1,23 @@
-#service  name
 spring:
   application:
     name: config-service-pfe
+  main:
+    allow-bean-definition-overriding: true
 
-#repository git url when we added our configurations
+  profiles:
+    active: git, vault
+
   cloud:
     config:
       server:
         git:
           uri: https://github.com/DalalYouness/config-repo-pfe.git
-    discovery:
-      enabled: true
 
-#vault url when we added our secrets
-    vault:
-      host: localhost
-      scheme: http
-      authentication: token
-      token: ${VAULT_TOKEN}
-      port: 8200
-
-#server port
+        vault:
+          host: localhost
+          port: 8200
+          scheme: http
+          kv-version: 2
+          token: ${VAULT_TOKEN}
 server:
   port: 8888
