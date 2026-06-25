@@ -13,11 +13,12 @@ spring:
         git:
           uri: https://github.com/DalalYouness/config-repo-pfe.git
 
-        vault:
-          host: localhost
-          port: 8200
-          scheme: http
-          kv-version: 2
-          token: ${VAULT_TOKEN}
+# we will active it in prod
+#        vault:
+#          host: localhost
+#          port: 8200
+#          scheme: http
+#          kv-version: 2
+#          token: ${VAULT_TOKEN}
 server:
   port: 8888
